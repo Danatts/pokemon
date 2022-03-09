@@ -1,8 +1,6 @@
 import './App.styles.css';
 import PokemonCard from './components/PokemonCard/PokemonCard'
-import { POKEMONS } from './shared/data.js'
-
-const pokemons = POKEMONS
+import { POKEMONS as pokemons} from './shared/data.js'
 
 function App() {
 
