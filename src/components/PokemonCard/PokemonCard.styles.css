@@ -28,7 +28,7 @@
 }
 
 .card__image {
-  background-image: url(../../../public/assets/paisaje.jpg);
+  background-image: url('../../assets/paisaje.jpg');
   height: 100%;
   width: 100%;
 }
