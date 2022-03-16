@@ -1,6 +1,15 @@
+import { getPokemon } from '../../shared/data'
+import { useParams } from 'react-router-dom'
+
 function CardInfo(){
+
+  const { name } = useParams()
+  const pokemon = getPokemon(name)
+
   return(
-    <h1>Hola, mundo</h1>
+    <pre>
+      {JSON.stringify(pokemon, null, 2) }  
+    </pre>
   )
 }
 

@@ -1,15 +1,18 @@
 import PokemonCard from "../PokemonCard/PokemonCard"
-import { POKEMONS as pokemons} from '../../shared/data.js'
+import { Link } from "react-router-dom"
+import { getPokemons } from '../../shared/data'
 import './CardsList.styles.css'
 
 function CardsList(){
+
+  const pokemons = getPokemons()
 
   return(
     <div className="list">
       {
         pokemons.map((item, id) => {
           return(
-            <PokemonCard key={id} pokemon={item} />
+            <Link to={`/${item.name}`} key={id}><PokemonCard pokemon={item} /></Link>
           )
         })
       }

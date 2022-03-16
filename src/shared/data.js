@@ -1,4 +1,4 @@
-export const POKEMONS = [
+const pokemons = [
   {
     "name": "bulbasaur",
     "order": 1,
@@ -6,7 +6,7 @@ export const POKEMONS = [
     "stats": [{
       "name": "hp",
       "base_stat": 45
-      },
+    },
       {
         "base_stat": 49,
         "name": "attack"
@@ -29,7 +29,7 @@ export const POKEMONS = [
     "stats": [{
       "name": "hp",
       "base_stat": 39
-      },
+    },
       {
         "base_stat": 52,
         "name": "attack"
@@ -52,7 +52,7 @@ export const POKEMONS = [
     "stats": [{
       "name": "hp",
       "base_stat": 44
-      },
+    },
       {
         "base_stat": 48,
         "name": "attack"
@@ -69,3 +69,13 @@ export const POKEMONS = [
     "weight": 90
   }
 ]
+
+export const getPokemons = () => {
+  return pokemons
+}
+
+export const getPokemon = (name) => {
+  return pokemons.find((item) => {
+    return item.name === name
+  })
+}

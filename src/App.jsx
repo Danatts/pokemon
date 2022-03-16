@@ -1,6 +1,7 @@
 import CardsList from './components/CardsList/CardsList';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.styles.css';
+import CardInfo from './components/CardInfo/CardInfo';
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<CardsList />} />
-        <Route path='/:name' />
+        <Route path='/:name' element={<CardInfo />}/>
       </Routes>
     </BrowserRouter>
   )
